@@ -1,0 +1,121 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background:#000;
+    background-size: cover;
+}
+
+.top-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    padding-right: 0px;
+}
+
+.logo {
+    width: 18vh;
+    height: 18vh;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+}
+
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 60%;
+    position: relative;
+}
+
+.user {
+    background-color: rgba(54, 31, 230, 0.7);
+    align-self: flex-end;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.user::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: rgba(54, 31, 230, 0.7);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+}
+
+.bot {
+    background-color:rgba(54, 31, 230, 0.7);
+    align-self: flex-start;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.bot::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: rgba(54, 31, 230, 0.7);
+    border-bottom: 0;
+    border-left: 0;
+    margin-right: -10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    border:2px solid white;
+    border-color: #fff;
+    margin: 0 10px;
+    background-color:#000;
+    color: white;
+}
+
+.mic-btn, .send-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
